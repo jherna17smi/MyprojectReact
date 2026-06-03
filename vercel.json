@@ -1,8 +1,3 @@
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rootDirectory": ".",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ff75bbbb8609d24e0e7c52fd1bb7270320c0e9e8c1a4bdee97cd99ddb177a41
+size 176

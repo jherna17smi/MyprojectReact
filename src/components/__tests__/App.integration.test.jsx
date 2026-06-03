@@ -2,6 +2,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import { act } from "react-dom/test-utils";
 import App from "../../App";
 
 describe("App integration", () => {
@@ -13,8 +14,10 @@ describe("App integration", () => {
     expect(screen.getByText("Cart Items: 0")).toBeInTheDocument();
 
     const addButtons = screen.getAllByRole("button", { name: /add to cart/i });
-    await user.click(addButtons[0]);
+    await act(async () => {
+      await user.click(addButtons[0]);
+    });
 
-    expect(screen.getByText("Cart Items: 1")).toBeInTheDocument();
+    expect(await screen.findByText("Cart Items: 1")).toBeInTheDocument();
   });
 });
