@@ -1,8 +1,8 @@
 // src/__tests__/App.integration.test.jsx
 import React from "react";
+import { act } from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { act } from "react-dom/test-utils";
 import App from "../../App";
 
 describe("App integration", () => {
